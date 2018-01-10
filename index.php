@@ -1,7 +1,7 @@
 <?php
 
 include_once 'config/db.php';
-include_once 'viev/helpers.php';
+include_once 'view/helpers.php';
 include_once 'classes\getInfo.php';
 include_once 'classes\sql.php';
 session_start();

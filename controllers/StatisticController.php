@@ -12,7 +12,7 @@ class StatisticController
 
         $numberOfRight = $_SESSION['numberOfRight'];
         $numberOfQuestions = $_SESSION['numberOfQuestions'];
-        render("statviev",
+        render("statview",
         ["title" => "Результати/таблиця рекордів",
         "text" => "Ви відповіли правильно на $numberOfRight питань з $numberOfQuestions"]);
         //var_dump($numberOfRight);
