@@ -2,7 +2,7 @@
 return array
 (
     'test' => 'test/index',
-    'main' => 'register/index',
+    'main' => 'registration/index',
     'statistic' => 'statistic/index'
 
 );

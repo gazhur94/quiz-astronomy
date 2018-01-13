@@ -1,8 +1,8 @@
 <?php
-include_once ROOT.'/models/register.php';
+include_once ROOT.'/models/registration.php';
 
 
-class RegisterController
+class RegistrationController
 {
     public function actionIndex()
     {
