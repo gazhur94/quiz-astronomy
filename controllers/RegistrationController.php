@@ -6,8 +6,9 @@ class RegistrationController
 {
     public function actionIndex()
     {
+        
         insertUsername();
-
+        
         return true;
     }
 }

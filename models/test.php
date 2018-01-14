@@ -13,19 +13,22 @@ function setNumberOfQuestions()
 {
         $_SESSION['numberOfQuestions'] = 16;
 }
-
-function getQuestions()
-{
-    if ($_SESSION['question_id'] <= $_SESSION['numberOfQuestions'])
+// class test
+// {
+//     public 
+    function getQuestions()
     {
-        $question_id= $_SESSION['question_id'];
-        $sql = "SELECT * FROM questions WHERE id='$question_id'";
-        $currentQuestion = sql::fetchSql($sql,'question');
-        $_SESSION['question'] = $currentQuestion;
-        //var_dump($_SESSION['question']);
+        if ($_SESSION['question_id'] <= $_SESSION['numberOfQuestions'])
+        {
+            $question_id= $_SESSION['question_id'];
+            $sql = "SELECT * FROM questions WHERE id='$question_id'";
+            $currentQuestion = sql::fetchSql($sql,'question');
+            //$_SESSION['question'] = $currentQuestion;
+            //var_dump($_SESSION['question']);
+            return $currentQuestion;
+        }
     }
-}
-
+// }
 
 function getAnswers()
 {

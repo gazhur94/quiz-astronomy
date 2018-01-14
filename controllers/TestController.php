@@ -9,26 +9,26 @@ class TestController
             setNumberOfQuestions();
             if ($_SESSION['question_id'] <= ($_SESSION['numberOfQuestions']+1))
             {
-            getQuestions();
-            getAnswers();
-            getIsTrue();
-            getUserId();
-            insertResult();
+                getQuestions();
+                getAnswers();
+                getIsTrue();
+                getUserId();
+                insertResult();
 
 
-            $question_id = $_SESSION['question_id'];
-            $question = $_SESSION['question']->getQuestion();
-            $questionIdReal = $question_id - 1;
+                $question_id = $_SESSION['question_id'];
+                $question = $_SESSION['question']->getQuestion();
+                $questionIdReal = $question_id - 1;
 
-            render("headers", ["title" => "Питання $questionIdReal",
-            "text" => "Питання №$questionIdReal. $question",
-            "forma" => "2"]);
+                render("headers", ["title" => "Питання $questionIdReal",
+                "text" => "Питання №$questionIdReal. $question",
+                "forma" => "2"]);
 
-            // if($_SESSION['question_id'] < 4)
-            // {
-                render("footer", ["page" => "Перейти до питання №$question_id"]);
-            // }
-        }
+                // if($_SESSION['question_id'] < 4)
+                // {
+                    render("footer", ["page" => "Перейти до питання №$question_id"]);
+                // }
+            }
         if(isset($_POST['end']))
         {
             endTest();
