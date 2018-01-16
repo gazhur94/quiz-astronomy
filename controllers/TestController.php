@@ -17,7 +17,7 @@ class TestController
 
 
                 $question_id = $_SESSION['question_id'];
-                $question = $_SESSION['question']->getQuestions();
+                $question = $_SESSION['question']->getQuestion();
                 $questionIdReal = $question_id - 1;
 
                 render("headers", ["title" => "Питання $questionIdReal",
