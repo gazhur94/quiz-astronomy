@@ -1,4 +1,4 @@
-<?php include_once ROOT.'/models/test.php'; ?>
+<?php namespace quiz\view; ?>
 
 
 </div>

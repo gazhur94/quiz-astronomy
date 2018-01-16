@@ -1,0 +1,19 @@
+{
+    "name": "gg/mvc-copy",
+    "description": "game",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrii Hazhur",
+            "email": "gazhur94@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "quiz\\":""
+        }
+    }
+}

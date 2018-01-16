@@ -1,4 +1,4 @@
-<?php include_once ROOT.'/models/statistic.php'; ?>
+<?php namespace quiz\view; ?>
 
 <!DOCTYPE html>
 <html>

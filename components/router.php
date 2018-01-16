@@ -41,7 +41,11 @@ class router
 
                 }
 
-                $controllerObject = new $controllerName;
+                $namespace = 'quiz\\controllers';
+                
+                $controllerClass = $namespace . '\\' . $controllerName;
+                
+                $controllerObject = new $controllerClass;
                 $result = $controllerObject->$actionName();
                 if ($result != null)
                 {

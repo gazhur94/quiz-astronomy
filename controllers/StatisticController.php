@@ -1,13 +1,14 @@
 <?php
-require_once ROOT.'/models/statistic.php';
+namespace quiz\controllers;
 
+use quiz\models\Records;
 class StatisticController
 {
     public function actionIndex()
     {
-        getNumberOfRight();
-        insertResult();
-        getTableOfRecords();
+        (new Records) -> getNumberOfRight();
+        (new Records)-> insertResult();
+        (new Records)-> getTableOfRecords();
 
 
         $numberOfRight = $_SESSION['numberOfRight'];

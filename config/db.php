@@ -1,6 +1,8 @@
 <?php
+namespace quiz\config;
 
-
+use quiz\classes\sql;
+use PDO;
 
 class db
 {

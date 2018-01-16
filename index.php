@@ -1,9 +1,7 @@
 <?php
 
-include_once 'config/db.php';
-include_once 'view/helpers.php';
-include_once 'classes\getInfo.php';
-include_once 'classes\sql.php';
+require_once('vendor/autoload.php');
+
 session_start();
 ini_set('display_errors',1);
 error_reporting(E_ALL);

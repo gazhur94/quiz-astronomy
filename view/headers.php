@@ -1,4 +1,8 @@
-<?php include_once ROOT.'/models/test.php'; ?>
+<?php namespace quiz\view; 
+
+use quiz\models\Answers;
+use quiz\classes\getInfo\classes\answer;
+?>
 
 
 <!DOCTYPE html>
@@ -23,11 +27,13 @@
                         <?php if (($forma) == "2"): ?>
 
                             <div class="custom-controls-stacked">
+                                 
+                                
                                 <?php foreach ($_SESSION['answer'] as $row): ?>
                                     <label class="custom-control custom-radio">
-                                            <input value="<?php echo $row->getAnswerId(); ?>" name="answer" type="radio" class="custom-control-input">
+                                            <input value="<?php echo $row[0]?>" name="answer" type="radio" class="custom-control-input">
                                             <span class="custom-control-indicator"></span>
-                                            <span class="custom-control-description"><?php echo $row->getAnswer(); ?></span>
+                                            <span class="custom-control-description"><?php echo $row[0]; ?></span>
                                     </label>
                                 <?php endforeach; ?>
 

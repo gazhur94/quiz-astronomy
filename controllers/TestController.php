@@ -1,32 +1,38 @@
 <?php
-require_once ROOT.'/models/test.php';
+namespace quiz\controllers;
+
+use quiz\models\Questions;
+use quiz\models\Answers;
+use quiz\models\AllAnswers;
+use quiz\view\helpers;
+use quiz\classes\getInfo\classes\question;
+
 
 class TestController
 {
     public function actionIndex()
     {
-            resetQuestionId();
-            setNumberOfQuestions();
+            (new Questions) -> resetQuestionId();
+            (new Questions) -> setNumberOfQuestions();
             if ($_SESSION['question_id'] <= ($_SESSION['numberOfQuestions']+1))
             {
-                getQuestions();
-                getAnswers();
-                getIsTrue();
-                getUserId();
-                insertResult();
-
+                (new Answers) -> getQuestionAnswersUserIdIsTrue();
+                (new AllAnswers) -> insertResult();
+                (new Questions) -> addQuestionId();
 
                 $question_id = $_SESSION['question_id'];
-                $question = $_SESSION['question']->getQuestion();
+                // $_SESSION['question'] = new Question;
+                $question = $_SESSION['question'];
                 $questionIdReal = $question_id - 1;
+               //var_dump($_SESSION['question']);
 
-                render("headers", ["title" => "Питання $questionIdReal",
+                helpers::render("headers", ["title" => "Питання $questionIdReal",
                 "text" => "Питання №$questionIdReal. $question",
                 "forma" => "2"]);
 
                 // if($_SESSION['question_id'] < 4)
                 // {
-                    render("footer", ["page" => "Перейти до питання №$question_id"]);
+                helpers::render("footer", ["page" => "Перейти до питання №$question_id"]);
                 // }
             }
         if(isset($_POST['end']))

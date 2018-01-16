@@ -1,12 +1,16 @@
 <?php
-
-function render ($template, $data =[])
+namespace quiz\view;
+class helpers
 {
-    $path = __DIR__ . '/' . $template . ".php";
-
-    if (file_exists($path))
+    public static function render ($template, $data =[])
     {
-        extract($data);
-        require($path);
+        $path = __DIR__ . '/' . $template . ".php";
+        
+        if (file_exists($path))
+        {
+            
+            extract($data);
+            require($path);
+        }
     }
 }
