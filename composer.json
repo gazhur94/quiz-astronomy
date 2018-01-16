@@ -1,0 +1,14 @@
+{
+    "name": "kk/mvc",
+    "description": "game",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrii Hazhur",
+            "email": "gazhur94@gmai.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
