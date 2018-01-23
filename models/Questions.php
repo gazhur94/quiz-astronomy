@@ -20,7 +20,7 @@ class Questions
 
     public function setNumberOfQuestions()
     {
-            $_SESSION['numberOfQuestions'] = 16;
+            $_SESSION['numberOfQuestions'] = 6;
     }
 
     public function getQuestions()

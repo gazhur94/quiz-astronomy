@@ -1,6 +1,11 @@
 <?php
 namespace quiz\models;
 
+use quiz\classes\getInfo\classes\answersDatabase;
+use quiz\classes\sql;
+use quiz\classes\getInfo\classes\getIsTrue;
+use quiz\classes\getInfo\classes\getId;
+
 class Records
 {
     public function getNumberOfRight()

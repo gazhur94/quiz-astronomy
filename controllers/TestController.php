@@ -6,6 +6,7 @@ use quiz\models\Answers;
 use quiz\models\AllAnswers;
 use quiz\view\helpers;
 use quiz\classes\getInfo\classes\question;
+use quiz\classes\test;
 
 
 class TestController
@@ -37,7 +38,7 @@ class TestController
             }
         if(isset($_POST['end']))
         {
-            endTest();
+            test::endTest();
         }
 
     }
